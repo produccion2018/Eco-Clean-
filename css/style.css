@@ -68,36 +68,121 @@ header {
   color: #f5f2ef;
 }
 
-/* Navigation Bar */
+/* Navegación */
 .main-nav {
-  background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro para mejor contraste */
-  border-bottom: 2px solid #fcfbf9;
-  padding: 15px 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s;
+  background-color: rgba(0, 0, 0, 0.9); /* Fondo más oscuro */
+  border-bottom: 2px solid #f0ad4e; /* Borde inferior dorado */
+  padding: 25px 0;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6); /* Sombra más profunda */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .main-nav .navbar-brand {
-  font-weight: bold;
-  font-size: 1.8rem;
+  font-weight: 700;
+  font-size: 2.2rem;
   color: #f0ad4e;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  transition: color 0.3s ease;
+}
+
+.main-nav .navbar-brand:hover {
+  color: #f0c050;
+}
+
+.main-nav .navbar-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px; /* Mayor separación entre los enlaces */
 }
 
 .main-nav .navbar-nav .nav-link {
-  font-size: 1.1rem;
+  font-size: 1.3rem; /* Enlaces más grandes */
   color: #ffffff;
   font-weight: 500;
   text-transform: uppercase;
-  transition: color 0.3s;
+  padding: 12px 20px;
+  border-radius: 30px;
+  transition: background-color 0.3s, color 0.3s, transform 0.4s ease, font-size 0.3s ease;
+  position: relative;
+}
+
+.main-nav .navbar-nav .nav-link::before {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #f0ad4e;
+  bottom: -5px;
+  left: 50%;
+  transition: width 0.3s, left 0.3s;
 }
 
 .main-nav .navbar-nav .nav-link:hover {
-  color: #f0ad4e !important;
+  background-color: #f0ad4e;
+  color: #000000;
+  transform: translateY(-5px); /* Efecto de elevación más fuerte */
+  font-size: 1.4rem; /* Aumento de tamaño en hover */
+}
+
+.main-nav .navbar-nav .nav-link:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+.main-nav .navbar-nav .nav-item {
+  position: relative;
+}
+
+.main-nav .navbar-toggler {
+  border: none;
 }
 
 .main-nav .navbar-toggler-icon {
-  border-color: #f0ad4e;
+  background-color: #f0ad4e;
+  border-radius: 5px;
 }
+
+.main-nav .navbar-collapse {
+  justify-content: center;
+}
+
+.main-nav .navbar-nav .nav-item::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #f0ad4e;
+  bottom: -5px;
+  left: 50%;
+  transform: scaleX(0);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-out, width 0.3s ease-out, left 0.3s ease-out;
+}
+
+.main-nav .navbar-nav .nav-item:hover::after,
+.main-nav .navbar-nav .nav-item:focus::after {
+  transform: scaleX(1);
+  width: 100%;
+  left: 0;
+}
+
+@media (max-width: 768px) {
+  .main-nav .navbar-nav {
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+  }
+
+  .main-nav .navbar-toggler-icon {
+    background-color: #f0ad4e;
+  }
+}
+
 
 /* Porque elegirnos*/
 .about-section {
