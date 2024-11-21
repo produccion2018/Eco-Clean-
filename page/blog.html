@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog ECO CLEAN</title>
+  
+  <!-- Fuentes y Estilos -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="../css/blog.css">
+</head>
+<body>
+
+    <!-- Navegación Principal -->
+  <nav class="main-nav">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="logo">
+        <img src="../img/logo.jpg" alt="ECO CLEAN Logo">
+        <h1>ECO CLEAN</h1>
+      </div>
+      <ul class="d-flex">
+        <li><a href="../index.html">Inicio</a></li>
+        <li><a href="../page/nosotros.html" class="active">Nosotros</a></li>
+        <li><a href="../page/trabajaconnosotros.html">Trabaja con Nosotros</a></li>
+        <li><a href="../page/blog.html">Blog</a></li>
+        <li><a href="../page/contacto.html">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Blog Section -->
+  <section id="blog">
+    <h2 class="animate__animated animate__fadeInDown">Últimas Noticias de Nuestro Blog</h2>
+    <div class="blog-container">
+      
+      <!-- Post 1 -->
+      <div class="blog-card animate__animated animate__fadeInUp">
+        <img src="../img/limpieza de techo.jpeg" alt="Limpieza de techos" class="blog-img">
+        <div class="blog-content">
+          <h3 class="blog-title animate__animated animate__fadeInLeft">La importancia de limpiar tus techos</h3>
+          <p class="blog-description animate__animated animate__fadeInRight">Un techo limpio no solo mejora el aspecto de tu hogar, sino que también prolonga la vida útil de los materiales.</p>
+          <a href="#" class="blog-link" onclick="leerMas(1)">Leer más</a>
+        </div>
+      </div>
+      
+      <!-- Post 2 -->
+      <div class="blog-card animate__animated animate__fadeInUp">
+        <img src="../img/servicio de lavado.jpeg" alt="Servicio de lavado" class="blog-img">
+        <div class="blog-content">
+          <h3 class="blog-title animate__animated animate__fadeInLeft">Cómo elegir el mejor servicio de lavado a presión</h3>
+          <p class="blog-description animate__animated animate__fadeInRight">Te ayudamos a identificar los aspectos clave para elegir un servicio confiable y eficiente.</p>
+          <a href="#" class="blog-link" onclick="leerMas(2)">Leer más</a>
+        </div>
+      </div>
+      
+      <!-- Post 3 -->
+      <div class="blog-card animate__animated animate__fadeInUp">
+        <img src="../img/cliente satisfecho.jpeg" alt="Clientes satisfechos" class="blog-img">
+        <div class="blog-content">
+          <h3 class="blog-title animate__animated animate__fadeInLeft">Historias de éxito: Clientes felices</h3>
+          <p class="blog-description animate__animated animate__fadeInRight">Descubre cómo transformamos los hogares de nuestros clientes con nuestros servicios.</p>
+          <a href="#" class="blog-link" onclick="leerMas(3)">Leer más</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../js/blog.js"></script> 
+</body>
+</html>
