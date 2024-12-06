@@ -16,11 +16,12 @@ function leerMas(postId) {
   }
   
 
-  window.addEventListener('scroll', function() {
-    const nav = document.querySelector('.main-nav');
-    if (window.scrollY > 50) {
-        nav.classList.add('scrolled');
+  
+  window.onscroll = function() {
+    var navbar = document.querySelector('.navbar');
+    if (window.pageYOffset > 50) {
+        navbar.classList.add('scrolled');
     } else {
-        nav.classList.remove('scrolled');
+        navbar.classList.remove('scrolled');
     }
-});
+};
