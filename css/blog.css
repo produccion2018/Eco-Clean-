@@ -7,201 +7,207 @@
     top: 0;
     z-index: 1000;
     font-family: 'Roboto', sans-serif;
-  }
-  
-  .main-nav .container {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: background-color 0.3s ease-in-out; /* Transición suave */
+}
+
+.main-nav .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-  }
-  
-  .main-nav .logo {
+}
+
+.main-nav .logo {
     display: flex;
     align-items: center;
-  }
-  
-  .main-nav .logo img {
+}
+
+.main-nav .logo img {
     width: 50px;
     margin-right: 10px;
-  }
-  
-  .main-nav .logo h1 {
+}
+
+.main-nav .logo h1 {
     font-family: 'Merriweather', serif;
     color: white;
     font-size: 1.8rem;
     margin: 0;
-  }
-  
-  .main-nav ul {
+}
+
+.main-nav ul {
     display: flex;
     list-style: none;
     margin: 0;
     padding: 0;
-  }
-  
-  .main-nav ul li {
-    margin: 0 15px;
-  }
-  
-  .main-nav ul li a {
+}
+
+.main-nav ul li {
+    margin: 0 20px;
+    position: relative; /* Para permitir un borde dinámico */
+}
+
+.main-nav ul li a {
     color: white;
     font-size: 1rem;
     font-weight: bold;
     text-decoration: none;
-    transition: color 0.3s ease, border-bottom 0.3s ease;
-  }
-  
-  .main-nav ul li a:hover {
+    transition: color 0.3s ease, border-bottom 0.3s ease, transform 0.2s ease;
+}
+
+.main-nav ul li a:hover {
     color: #ffc107; /* Color dorado en hover */
     border-bottom: 2px solid #ffc107;
-  }
-  
-  .main-nav ul li a.active {
+    transform: translateY(-3px); /* Pequeño efecto de elevación */
+}
+
+.main-nav ul li a.active {
     color: #ffc107;
     font-weight: bold;
     border-bottom: 2px solid #ffc107;
-  }
-  
-  /* Estilos Responsivos */
-  @media (max-width: 768px) {
+}
+
+/* Efecto de cambio de fondo en scroll */
+.main-nav.scrolled {
+    background-color: #0056b3; /* Fondo más oscuro cuando se hace scroll */
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
     .main-nav .container {
-      flex-direction: column;
-      align-items: flex-start;
+        flex-direction: column;
+        align-items: flex-start;
     }
-  
+
     .main-nav ul {
-      flex-direction: column;
-      margin-top: 20px;
+        flex-direction: column;
+        margin-top: 20px;
+        width: 100%;
+        align-items: flex-start;
     }
-  
+
     .main-nav ul li {
-      margin-left: 0;
-      margin-top: 10px;
+        margin-left: 0;
+        margin-top: 10px;
+        width: 100%;
     }
-  }
-  
-  /* General Styles */
-  body {
+}
+
+/* Estilos Generales */
+body {
     font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f9f9f9;
     color: #333;
-  }
-  
-  h2 {
-    text-align: center;
-    font-size: 2.5rem;
-    margin: 50px 0;
-    color: #333;
-    font-family: 'Merriweather', serif;
-    animation: fadeInDown 1s ease-out;
-  }
-  
-  /* Contenedor de Blogs */
-  .blog-container {
+}
+
+/* Contenedor de Blogs */
+.blog-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
     padding: 20px;
-  }
-  
-  /* Tarjeta de Blog */
-  .blog-card {
+}
+
+/* Tarjeta de Blog */
+.blog-card {
     width: 300px;
     border-radius: 8px;
     overflow: hidden;
     background-color: #fff;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease, border 0.3s ease;
     animation: fadeInUp 1s ease-out;
-  }
-  
-  .blog-card:hover {
+    border: 2px solid transparent; /* Borde por defecto */
+    opacity: 0.95; /* Opacidad por defecto */
+}
+
+.blog-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-  }
-  
-  .blog-img {
+    opacity: 1; /* Opacidad al hacer hover */
+    border-color: #007BFF; /* Borde azul en hover */
+}
+
+.blog-img {
     width: 100%;
     height: 200px;
     object-fit: cover;
     transition: opacity 0.3s ease;
-  }
-  
-  .blog-card:hover .blog-img {
+}
+
+.blog-card:hover .blog-img {
     opacity: 0.7;
-  }
-  
-  .blog-content {
+}
+
+.blog-content {
     padding: 20px;
-  }
-  
-  .blog-title {
+}
+
+.blog-title {
     font-size: 1.8rem;
     font-family: 'Merriweather', serif;
     color: #333;
     margin-bottom: 15px;
     text-transform: uppercase;
     animation: fadeInLeft 1s ease-out;
-  }
-  
-  .blog-description {
+}
+
+.blog-description {
     font-size: 1rem;
     color: #555;
     line-height: 1.6;
     margin-bottom: 20px;
     animation: fadeInRight 1s ease-out;
-  }
-  
-  .blog-link {
+}
+
+.blog-link {
     display: inline-block;
     color: #007BFF;
     font-weight: bold;
     text-decoration: none;
     transition: color 0.3s ease;
-  }
-  
-  .blog-link:hover {
+}
+
+.blog-link:hover {
     color: #0056b3;
-  }
-  
-  /* Animaciones */
-  @keyframes fadeInDown {
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
     0% { opacity: 0; transform: translateY(-30px); }
     100% { opacity: 1; transform: translateY(0); }
-  }
-  
-  @keyframes fadeInUp {
+}
+
+@keyframes fadeInUp {
     0% { opacity: 0; transform: translateY(30px); }
     100% { opacity: 1; transform: translateY(0); }
-  }
-  
-  @keyframes fadeInLeft {
+}
+
+@keyframes fadeInLeft {
     0% { opacity: 0; transform: translateX(-30px); }
     100% { opacity: 1; transform: translateX(0); }
-  }
-  
-  @keyframes fadeInRight {
+}
+
+@keyframes fadeInRight {
     0% { opacity: 0; transform: translateX(30px); }
     100% { opacity: 1; transform: translateX(0); }
-  }
-  
-  /* Estilos Responsivos */
-  @media (max-width: 768px) {
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
     .blog-container {
-      flex-direction: column;
-      align-items: center;
+        flex-direction: column;
+        align-items: center;
     }
-  
+
     .blog-card {
-      width: 90%;
-      max-width: 600px;
-      margin: 20px 0;
+        width: 90%;
+        max-width: 600px;
+        margin: 20px 0;
     }
-  }
-  
+}

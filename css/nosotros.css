@@ -1,134 +1,160 @@
 /* General */
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
-  }
-  
-  h1, h2 {
-    text-align: center;
-    margin: 20px 0;
-    font-weight: bold;
-  }
-  
-  p {
-    line-height: 1.8;
-  }
-  
-  a {
-    text-decoration: none;
-    color: #007BFF;
-  }
-  
-  a:hover {
-    color: #0056b3;
-  }
-  
-  /* Navegación Principal */
-  .main-nav {
-    background-color: #007BFF;
-    color: white;
-    padding: 15px 0;
-  }
-  
-  .main-nav .logo {
-    display: flex;
-    align-items: center;
-  }
-  
-  .main-nav .logo img {
-    width: 50px;
-    margin-right: 10px;
-  }
-  
-  .main-nav ul {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .main-nav ul li {
-    margin: 0 15px;
-  }
-  
-  .main-nav ul li a {
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-  }
-  
-  .main-nav ul li a.active {
-    border-bottom: 2px solid #ffc107;
-  }
-  
-  /* Hero Section */
-  .hero-section {
-    background-image: url('hero-about.jpg');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    padding: 60px 20px;
-  }
-  
-  .hero-section .hero-text {
-    font-size: 2.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-  }
-  
-  /* Sección Nosotros */
-  .about-us {
-    padding: 40px 20px;
-    background-color: #f8f9fa;
-  }
-  
-  .about-us h2 {
-    color: #007BFF;
-    margin-bottom: 30px;
-  }
-  
-  .about-us .content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
+}
+
+h1, h2 {
+  text-align: center;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+p {
+  line-height: 1.8;
+}
+
+a {
+  text-decoration: none;
+  color: #007BFF;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #0056b3;
+}
+
+/* Barra de navegación con Bootstrap */
+.navbar {
+  background-color: #007BFF;
+  padding: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navbar-brand:hover {
+  color: #ffc107;
+}
+
+.navbar-nav .nav-link {
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffc107;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  color: white;
+}
+
+/* Hero Section */
+.hero-section {
+  background-image: url('hero-about.jpg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.hero-section .hero-text {
+  font-size: 2.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* Sección Nosotros */
+.about-us {
+  padding: 40px 20px;
+  background-color: #f8f9fa;
+}
+
+.about-us h2 {
+  color: #007BFF;
+  margin-bottom: 30px;
+}
+
+.about-us .content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.about-us img {
+  width: 40%;
+  border-radius: 10px;
+  opacity: 0.9;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  border: 2px solid #007BFF;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.about-us img:hover {
+  transform: scale(1.05);
+  opacity: 1;
+}
+
+.about-us .text {
+  flex: 1;
+  padding: 20px;
+}
+
+.about-us .text p {
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Footer */
+footer {
+  background: #007BFF;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+footer .social-footer a {
+  margin: 0 10px;
+  font-size: 1.5rem;
+  color: white;
+  transition: color 0.3s;
+}
+
+footer .social-footer a:hover {
+  color: #ffc107;
+}
+
+/* Responsivo para dispositivos móviles */
+@media (max-width: 768px) {
   .about-us img {
-    width: 40%;
-    border-radius: 10px;
+      width: 100%;
   }
-  
-  .about-us .text {
-    flex: 1;
-    padding: 20px;
+
+  .hero-section .hero-text {
+      font-size: 2rem;
   }
-  
-  .about-us .text p {
-    margin-bottom: 20px;
-    color: #555;
+
+  .about-us .content {
+      flex-direction: column;
+      text-align: center;
   }
-  
-  /* Footer */
-  footer {
-    background: #007BFF;
-    color: white;
-    padding: 20px;
-    text-align: center;
+
+  .navbar-brand {
+      font-size: 1.2rem;
   }
-  
-  footer .social-footer a {
-    margin: 0 10px;
-    font-size: 1.5rem;
-    color: white;
-    transition: color 0.3s;
-  }
-  
-  footer .social-footer a:hover {
-    color: #ffc107;
-  }
-  
+}
